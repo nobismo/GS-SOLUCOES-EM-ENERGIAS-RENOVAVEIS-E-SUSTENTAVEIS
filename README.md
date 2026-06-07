@@ -38,6 +38,3 @@ Definida automaticamente com base na disponibilidade energética do sistema.
 ## Status Operacional
 
 Exibido em tempo real no display LCD e no monitor serial.
-# Conclusão
-
-O projeto demonstrou a aplicação prática de programação, automação e monitoramento inteligente em um cenário de missão espacial experimental. A solução atende aos requisitos propostos pelo desafio e aplica conceitos de energia renovável, sustentabilidade e tomada de decisão automatizada.
