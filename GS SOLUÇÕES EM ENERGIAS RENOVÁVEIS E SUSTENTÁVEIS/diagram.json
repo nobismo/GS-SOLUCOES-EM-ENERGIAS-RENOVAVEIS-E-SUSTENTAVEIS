@@ -1,0 +1,66 @@
+{
+  "version": 1,
+  "author": "Rodrigo",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": -9, "left": -39, "attrs": {} },
+    {
+      "type": "wokwi-lcd1602",
+      "id": "lcd1",
+      "top": -190,
+      "left": 290,
+      "attrs": { "pins": "i2c" }
+    },
+    {
+      "type": "wokwi-ntc-temperature-sensor",
+      "id": "ntc1",
+      "top": 137,
+      "left": -250.2,
+      "attrs": {}
+    },
+    { "type": "wokwi-potentiometer", "id": "pot1", "top": 94.7, "left": 383.8, "attrs": {} },
+    {
+      "type": "wokwi-led",
+      "id": "ledVerde",
+      "top": -120,
+      "left": 40,
+      "attrs": { "color": "green" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "ledAmarelo",
+      "top": -120,
+      "left": 0,
+      "attrs": { "color": "yellow" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "ledVermelho",
+      "top": -120,
+      "left": -40,
+      "attrs": { "color": "red" }
+    },
+    { "type": "wokwi-buzzer", "id": "buzz1", "top": 79.2, "left": 299.4, "attrs": {} }
+  ],
+  "connections": [
+    [ "lcd1:GND", "uno:GND.1", "black", [] ],
+    [ "lcd1:VCC", "uno:5V", "red", [ "h-44.4", "v350.1", "h-128.6" ] ],
+    [ "lcd1:SDA", "uno:A4", "green", [ "h-34.8", "v321.5" ] ],
+    [ "lcd1:SCL", "uno:A5", "blue", [ "h-15.6", "v321" ] ],
+    [ "ntc1:VCC", "uno:5V", "red", [ "h28.8", "v57.6", "h246.4" ] ],
+    [ "ntc1:GND", "uno:GND.2", "black", [ "h38.4", "v57.6", "h246.3" ] ],
+    [ "ntc1:OUT", "uno:A0", "green", [ "h19.2", "v57.5", "h304" ] ],
+    [ "pot1:VCC", "uno:5V", "red", [ "v42.7", "h-269" ] ],
+    [ "pot1:GND", "uno:GND.3", "black", [ "v61.9", "h-230" ] ],
+    [ "pot1:SIG", "uno:A1", "green", [ "v52.3", "h-201.5" ] ],
+    [ "ledVerde:A", "uno:2", "green", [ "v39.6", "h132.5" ] ],
+    [ "ledVerde:C", "uno:GND.4", "black", [] ],
+    [ "ledAmarelo:A", "uno:3", "yellow", [ "v49.2", "h163" ] ],
+    [ "ledAmarelo:C", "uno:GND.4", "black", [] ],
+    [ "ledVermelho:A", "uno:4", "red", [ "v58.8", "h193.5" ] ],
+    [ "ledVermelho:C", "uno:GND.4", "black", [] ],
+    [ "buzz1:1", "uno:5", "purple", [ "h-39", "v-172.8", "h-79.4" ] ],
+    [ "buzz1:2", "uno:GND.5", "black", [] ]
+  ],
+  "dependencies": {}
+}
